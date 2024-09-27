@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeavingWords - Premium Content Writing Services</title>
+    <style>
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --accent-color: #FFD93D;
+            --background-color: #f8f9fa;
+            --text-color: #2F3542;
+            --light-text: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 10px 15px;
+        }
+
+        nav ul li a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .banner {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner h2 {
+            color: var(--accent-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .service h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            transform: scale(1.05);
+        }
+
+        .about-section,
+        .services-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2,
+        .services-section h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .service-item {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: var(--background-color);
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .service-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .banner h2 {
+                font-size: 1.8rem;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section,
+            .services-section {
+                padding: 20px;
+            }
+
+            .service-item {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .banner {
+                padding: 30px 15px;
+            }
+
+            .banner h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .about-section h2,
+            .services-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .service-item h3 {
+                font-size: 1.4rem;
+            }
+
+            .above{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="above">
+            <h1>WeavingWords</h1>
+            <p>Your go-to destination for premium content writing services</p>
+        </div>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <main id="home">
+        <section class="banner">
+            <h2>Crafting Words, Weaving Success</h2>
+            <p>Transform your brand with compelling content that captivates and converts. At WeavingWords, we create
+                stories that resonate and inspire action.</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </section>
+        <section class="services">
+            <div class="service">
+                <h3>Complete Website Content</h3>
+                <p>Transform your online presence with customized website content that engages and converts.</p>
+            </div>
+            <div class="service">
+                <h3>SEO Articles & Blog Posts</h3>
+                <p>Boost your visibility with SEO-optimized content that ranks and attracts quality traffic.</p>
+            </div>
+            <div class="service">
+                <h3>Social Media Content</h3>
+                <p>Engage your audience across all platforms with compelling and shareable content.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Us Page -->
+    <main id="about" class="about-section">
+        <h2>About WeavingWords</h2>
+        <p>In today's digital age, standing out requires more than just good content—it demands exceptional content. We
+            understand this, and that's why we go beyond the ordinary to craft words that not only inform but also
+            inspire and drive action. Whether you're a start-up looking to make a mark or an established brand aiming to
+            refresh your image, we have the expertise to help you achieve your goals.</p>
+        <h3>Our Mission</h3>
+        <p>We aim to craft compelling and creative content that engages, informs, and drives our clients' success. We
+            strive to understand each client's unique voice and goals, delivering tailored writing solutions that
+            resonate with their audience, enhance their brand, and achieve their objectives.</p>
+        <h3>Our Vision</h3>
+        <p>We envision a future as a leading content writing service recognized for its quality, creativity, and
+            reliability. We aspire to empower businesses and individuals with the power of words, transforming ideas
+            into impactful narratives that inspire, educate, and connect.</p>
+        <h3>Why Choose WeavingWords?</h3>
+        <ul>
+            <li>Customized Content Strategy</li>
+            <li>Engaging and Persuasive Writing</li>
+            <li>SEO-Optimized Content</li>
+            <li>Quick Turnaround</li>
+            <li>Comprehensive Services</li>
+            <li>Flexible Packages</li>
+            <li>Collaborative Approach</li>
+        </ul>
+    </main>
+
+    <!-- Services Page -->
+    <main id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Complete Website Content</h3>
+            <p>Unlock the potential of your online presence with customized website content. Get engaging home pages,
+                detailed about us pages, elaborate service pages, and more meticulously crafted to enhance your digital
+                visibility.</p>
+            <ul>
+                <li>Comprehensive coverage of your business, products, and services</li>
+                <li>Consistent tone across all pages for a cohesive brand identity</li>
+                <li>Enhanced user experience leading to higher conversion rates</li>
+                <li>Improved search engine rankings through optimized content</li>
+            </ul>
+        </div>
+        <div class="service-item">
+            <h3>SEO Articles and Blog Posts</h3>
+            <p>Empower your content marketing strategy with SEO-friendly articles and blog posts, irrespective of the
+                niche or industry. Get informative, creative, and shareable content backed by in-depth research and
+                relevant keywords to establish your brand authority.</p>
+            <ul>
+                <li>Increased visibility and traffic to your website</li>
+                <li>Quality content that establishes your authority in your industry</li>
+                <li>Targeted keywords for higher search engine rankings</li>
+                <li>Regularly updated content to keep your audience engaged</li>
+            </ul>
+        </div>
+        <div class="service-item">
+            <h3>Social Media Content</h3>
+            <p>Create waves on social media with attractive taglines, attention-grabbing captions, engaging posts, and
+                stunning graphics crafted to perfection. Tailored content for each platform ensures your message
+                resonates with your target audience and boosts user engagement.</p>
+            <ul>
+                <li>Consistent and engaging content to build your brand presence</li>
+                <li>Increased audience engagement and interaction</li>
+                <li>Tailored content for each platform to maximize reach</li>
+                <li>Strategic storytelling to connect with your target audience</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WeavingWords. All rights reserved.</p>
+    </footer>
+    <!-- The HTML content remains the same as in the previous version -->
+    <!-- ... -->
+</body>
+
+</html>
